@@ -16,6 +16,10 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/',(req,res)=>{
+  res.send({msg:"success",status:200});
+})
+
 const CONNECTION_URL = process.env.MONGO_URI;
 const PORT = process.env.PORT|| 5000;
 
